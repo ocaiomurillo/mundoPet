@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MundoPet</title>
+    <link rel="icon" href="./assets/svg/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <aside class="menu">
+        <h1 class="dnone">MundoPet</h1>
+        <img src="./assets/svg/logo.svg" alt="logo do mundo pet">
+        <nav>
+            <ul class="menu__itens">
+                <li><a class="menu__publicar" href="#publicar">Publicar</a></li>
+                <li class="menu__item">
+                    <img src="./assets/svg/feed.svg" alt="feed" class="menu__icon">
+                    <a href="#feed">Feed</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./assets/svg/perfil.svg" alt="perfil" class="menu__icon">
+                    <a href="#perfil">Perfil</a>
+                </li>
+                <li class="menu__item">
+                    <img src="./assets/svg/info.svg" alt="info" class="menu__icon">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="menu__item">
+                    <img src="assets/svg/logout.svg" alt="close" class="menu__icon">
+                    <a href="#sair">Sair</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="publicar">
+        <div class="publicar__imagem">
+            <div class="imagem__box">
+                <img src="./assets/svg/gatinho.svg" alt="gato laranja" class="imagem">
+            </div>
+            <button id="carregar" class="carregar__imagem">Carregar imagem</button>
+            <input type="file" id="imagem_upload" accpet="image/*" required class="dnone">
+            <div class="imagem__nome">
+                <h3 class="nome">imagem_projeto.png</h3>
+                <img src="./assets/svg/close.svg" alt="fechar">
+            </div>
+        </div>
+        <div class="publicar__dados">
+            <h2 class="dados__titulo">Nova foto</h2>
+            <form class="dados__formulario">
+                <label for="titulo">Titulo da foto</label>
+                <input type="text" id="titulo" placeholder="Gato bonifácio" required>
+                <label for="descricao">Descrição</label>
+                <textarea type="textarea" id="descricao" placeholder="O gato bonifácio é um gato laranja esperto e sapeca." required></textarea>               
+                <label for="hashtags">Hashtags</label>
+                <input type="text" id="hashtags" placeholder="">
+                <ul class="lista__hashtags">
+                </ul>
+                <div class="botoes">
+                    <button type="reset" class="botao__descartar">Descartar</button>
+                    <button type="submit" class="botao__publicar">Publicar</button>
+                </div>
+            </form>      
+        </div>
+    </main>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>

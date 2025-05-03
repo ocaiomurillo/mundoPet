@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('./normalize.css');
+@import url('./resset.css');
+@import url('./std.css');
+@import url('./free.css');
+@import url('./publicar.css');
+
+:root{
+    /* Page */
+    --page-color: #00090E;
+
+    /* Font */
+    --font-family: 'Prompt', sans-serif;
+    --font-family-code: 'Roboto Mono', monospace;
+
+    --heading: 500 44px/120% var(--font-family);
+    --heading-sm: 500 37px/120% var(--font-family);
+
+    --subtitle: 400 26px/150% var(--font-family);
+    --subtitle-large: 400 31px/150% var(--font-family);
+    --subtitle-semibold: 600 26px/150% var(--font-family);
+    --subtitle-semibold-large: 600 31px/150% var(--font-family);
+
+    --paragraph-large: 400 22px/150% var(--font-family);
+    --paragraph-large-semibold: 600 22px/150% var(--font-family);
+    --paragraph: 400 18px/150% var(--font-family);
+    --paragraph-semibold: 600 18px/150% var(--font-family);
+    --paragraph-small: 400 15px/150% var(--font-family);
+    --paragraph-small-semibold: 600 15px/150% var(--font-family);
+
+    --paragraph-code: 400 15px/auto var(--font-family-code);
+
+    --label: 400 12.5px/150% var(--font-family);
+
+    /* Color */
+    /* Principais */
+    --rosa-destaque: #FD7BF0;
+    --rosa-pastel: #FB9CFD;
+    --roxo-escuro: #211727;
+
+    /*Escala Cinza*/
+    --grafite: #00090E;
+    --cinza-medio: #888888;
+    --cinza-claro: #E7E5E5;
+    --offwhite: #E1E1E1;
+    --branco: #FFFFFF;
+
+    /* Espaçamento */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    
+    /* Bordas */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+  }

@@ -1,0 +1,45 @@
+/*************************
+ * RESET DE BOTÕES
+ *************************/
+ button {
+    /* Reset básico */
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    
+    /* Evita problemas de dimensionamento */
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    
+    /* Evita seleção de texto */
+    -webkit-user-select: none;
+    user-select: none;
+    
+    /* Remove highlight de toque em mobile */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Melhora a renderização de texto */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Acessibilidade - mantenha alguma indicação visual de foco */
+  button:focus-visible {
+    outline: 2px solid #4d90fe;
+    outline-offset: 2px;
+  }
+  
+  /* Estado desabilitado */
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
