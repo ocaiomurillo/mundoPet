@@ -83,16 +83,6 @@ inputTags.addEventListener("keypress", async (evento) => {
     }
 })
 
-const botaoPublicar = document.querySelector(".botao__publicar");
-
-botaoPublicar.addEventListener("click", async (evento) => {
-    evento.preventDefault();
-
-    const tituloFoto = document.getElementById("titulo").value;
-    const descricaoFoto = document.getElementById("descricao").value;
-    const tags = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
-})
-
 async function publicarFoto(tituloFoto, descricaoFoto, tags) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -106,3 +96,35 @@ async function publicarFoto(tituloFoto, descricaoFoto, tags) {
         }, 2000)
     })
 }
+
+const botaoPublicar = document.querySelector(".botao__publicar");
+
+botaoPublicar.addEventListener("click", async (evento) => {
+    evento.preventDefault();
+
+    const tituloFoto = document.getElementById("titulo").value;
+    const descricaoFoto = document.getElementById("descricao").value;
+    const tags = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    try {
+        const resultado = await publicarFoto(tituloFoto, descricaoFoto, tags);
+        console.log(resultado);
+        alert("Deu tudo certo!")
+    } catch (error) {
+        console.log("Deu errado: ", error)
+        alert("Deu tudo errado!");
+    }
+})
+
+const botaoDescartar = document.querySelector(".botao__descartar")
+
+botaoDescartar.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    const form = document.querySelector(".dados__formulario");
+    form.reset();
+
+    imagemPrincipal.src = "./assets/svg/gatinho.svg";
+    nomeImagem.textContent = "imagem_gatinho.png";
+
+    listaTags.innerHTML = "";
+})
